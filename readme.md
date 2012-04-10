@@ -1,5 +1,5 @@
 # Simple WordPress Auto Installer for WAMP
-![wamp wordpress installer](http://imgur.com/xckvR)
+![wamp wordpress installer](http://i.imgur.com/xckvR.png)
 ## **Background**
 Simple WordPress Auto Installer for [WAMP](http://www.wampserver.com/en/)(and maybe other amp stacks like xampp....) is something that i coded after a friend of mine asked me if there is a fantastico installer for WAMP, which was funny since he only needed it to install WordPress. 
 
