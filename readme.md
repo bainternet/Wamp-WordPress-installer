@@ -21,6 +21,9 @@ the script will then download the latest copy of WordPress, extract the files to
 
 ## License
 Copyright 2012, Ohad Raz <admin@bainternet.info>
+licensed under the GPL license: [http://www.gnu.org/licenses/gpl.html](http://www.gnu.org/licenses/gpl.html)
+license.txt file included.
+
 
 ## Changelog:
 
@@ -36,5 +39,3 @@ Copyright 2012, Ohad Raz <admin@bainternet.info>
 0.1
 - Initial release
 
-licensed under the GPL license: [http://www.gnu.org/licenses/gpl.html](http://www.gnu.org/licenses/gpl.html)
-license.txt file included.
