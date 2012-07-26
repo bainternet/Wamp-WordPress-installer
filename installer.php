@@ -197,7 +197,7 @@ if (isset($_POST['install'])){
   </form>
   <div style="text-align: center">
     <small>
-      <a href="hhttps://github.com/bainternet/Wamp-WordPress-installer/zipball/master">
+      <a href="https://github.com/bainternet/Wamp-WordPress-installer/zipball/master">
         Download
       </a> |
       <a href="https://github.com/bainternet/Wamp-WordPress-installer/issues">
