@@ -27,6 +27,11 @@ license.txt file included.
 
 ## Changelog:
 
+0.3
+- added function to get the latest version by api instead of manually updating.
+- added curl enabled check based on pull #5.
+- added a bunch of languages.
+
 0.2
 - Changed logic for download.
 - Added a few other laguages by requests.
