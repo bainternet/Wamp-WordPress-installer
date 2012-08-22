@@ -1,67 +1,169 @@
 <?php
 /**
-* Simple WordPress Auto Installer 
+* Simple WordPress Auto Installer
 *
 * @author Ohad Raz <admin@bainternet.info> | http://en.bainternet.info
 * @package WordPress Auto Installer
-* @version 0.2
+* @version 0.3
 * @file: installer.php
 * @todo Better error handling.
 *  
 */
 ?>
 <?php
-$last_v_doted = '3.3.2';
 $versions = array(
   array(
-    'label' => 'Local file', 
+    'label' => 'Local file',
     'url' => 'local',
     'description' => 'Use a custom install , zip to a file named latest.zip and place in the same directory of this file.'
   ),
   array(
-    'label' => 'Latest version', 
+    'label' => 'Latest version',
     'url' => 'http://wordpress.org/latest.zip',
     'description' => 'Download the latest stable English version'
   ),
   array(
-    'label' => 'Last nightly', 
+    'label' => 'Last nightly',
     'url' => 'http://wordpress.org/nightly-builds/wordpress-latest.zip',
     'description' => 'Download the latest beta version'
   ),
   array(
-    'label' => 'Hebrew', 
-    'url' => 'http://he.wordpress.org/wordpress-'.$last_v_doted.'-he_IL.zip',
+    'label' => 'Hebrew - עברית',
+    'lang_code' => 'he_IL',
+    'url' => 'remote',
     'description' => 'Download the latest stable Hebrew version'
   ),
   array(
-    'label' => 'Italian', 
-    'url' => 'http://it.wordpress.org/wordpress-'.$last_v_doted.'-it_IT.zip',
+    'label' => 'Italian',
+    'lang_code' => 'it_IT',
+    'url' => 'remote',
     'description' => 'Download the latest stable Italian version'
   ),
   array(
-    'label' => 'French', 
-    'url' => 'http://fr.wordpress.org/wordpress-'.$last_v_doted.'-fr_FR.zip',
+    'label' => 'French - Français',
+    'lang_code' => 'fr_FR',
+    'url' => 'remote',
     'description' => 'Download the latest stable French version'
   ),
   array(
-    'label' => 'Spanish', 
-    'url' => 'http://es.wordpress.org/wordpress-'.$last_v_doted.'-es_ES.zip',
+    'label' => 'Spanish - Español',
+    'lang_code' => 'es_ES',
+    'url' => 'remote',
     'description' => 'Download the latest stable Spanish version'
   ),
   array(
-    'label' => 'Romanian', 
-    'url' => 'http://ro.wordpress.org/wordpress-'.$last_v_doted.'-ro_RO.zip',
+    'label' => 'Romanian - Română',
+    'lang_code' => 'ro_RO',
+    'url' => 'remote',
     'description' => 'Download the latest stable Romanian version'
   ),
   array(
-    'label' => 'Russian', 
-    'url' => 'http://ru.wordpress.org/wordpress-'.$last_v_doted.'-ru_RU.zip',
+    'label' => 'Russian — Русский',
+    'lang_code' => 'ru_RU',
+    'url' => 'remote',
     'description' => 'Download the latest stable Russian version'
   ),
   array(
-    'label' => 'Japanese', 
-    'url' => 'http://ja.wordpress.org/wordpress-'.$last_v_doted.'-ja.zip',
+    'label' => 'Japanese (日本語)',
+    'url' => 'remote',
+    'lang_code' => 'ja',
     'description' => 'Download the latest stable Japanese  version'
+  ),
+  array(
+    'label' => 'Brazilian Portuguese',
+    'url' => 'remote',
+    'lang_code' => 'pt_BR',
+    'description' => 'Download the latest stable Brazilian Portuguese version'
+  ),
+  array(
+    'label' => 'European Portuguese',
+    'url' => 'remote',
+    'lang_code' => 'pt_PT',
+    'description' => 'Download the latest stable European Portuguese version'
+  ),
+  array(
+    'label' => 'Polish - Polski',
+    'url' => 'remote',
+    'lang_code' => 'pl_PL',
+    'description' => 'Download the latest stable Polish version'
+  ),
+  array(
+    'label' => 'Korean - 한국어',
+    'url' => 'remote',
+    'lang_code' => 'ko_KR',
+    'description' => 'Download the latest stable Korean version'
+  ),
+  array(
+    'label' => 'Hungarian - Magyar',
+    'url' => 'remote',
+    'lang_code' => 'hu_HU',
+    'description' => 'Download the latest stable Hungarian version'
+  ),
+  array(
+    'label' => 'Dutch - Nederlands',
+    'url' => 'remote',
+    'lang_code' => 'nl_NL',
+    'description' => 'Download the latest stable Dutch version'
+  ),
+  array(
+    'label' => 'Vietnamse - Tiếng Việt',
+    'url' => 'remote',
+    'lang_code' => 'vi',
+    'description' => 'Download the latest stable Vietnamse version'
+  ),
+  array(
+    'label' => 'Thai',
+    'url' => 'remote',
+    'lang_code' => 'th',
+    'description' => 'Download the latest stable Thai version'
+  ),
+  array(
+    'label' => 'Swedish - Svenska',
+    'url' => 'remote',
+    'lang_code' => 'sv_SE',
+    'description' => 'Download the latest stable Swedish version'
+  ),
+  array(
+    'label' => 'Arabic – عربي',
+    'url' => 'remote',
+    'lang_code' => 'ar',
+    'description' => 'Download the latest stable Arabic version'
+  ),
+  array(
+    'label' => 'Chinese - 中文',
+    'url' => 'remote',
+    'lang_code' => 'zh_CN',
+    'description' => 'Download the latest stable Chinese version'
+  ),
+  array(
+    'label' => 'Slovenian - Slovenščina',
+    'url' => 'remote',
+    'lang_code' => 'sl_SI',
+    'description' => 'Download the latest stable Slovenian version'
+  ),
+  array(
+    'label' => 'Slovak – Slovenčina',
+    'url' => 'remote',
+    'lang_code' => 'sk_SK',
+    'description' => 'Download the latest stable Slovak version'
+  ),
+  array(
+    'label' => 'Danish - Dansk',
+    'url' => 'remote',
+    'lang_code' => 'da_DK',
+    'description' => 'Download the latest stable Danish version'
+  ),
+  array(
+    'label' => 'Czech - Čeština',
+    'url' => 'remote',
+    'lang_code' => 'cs_CZ',
+    'description' => 'Download the latest stable Czech version'
+  ),
+  array(
+    'label' => 'Croatian - Hrvatski',
+    'url' => 'remote',
+    'lang_code' => 'hr',
+    'description' => 'Download the latest stable Croatian version'
   ),
   //any other language you want goes here
 );
@@ -70,18 +172,25 @@ $download_ok  = false;
 $done_zip = false;
 if (isset($_POST['install'])){
   //download latest
-  if (isset($_POST['ver']) && $_POST['ver'] != 'local'){
+  if (isset($_POST['ver']) && in_array($_POST['ver'],array('1','2'))){
     $download_ok = http_get_file($versions[$_POST['ver']]['url'],'latest.zip');
-  }else{
+  }elseif ($_POST['ver'] == '0'){
     //use local file
     $download_ok = file_exists('latest.zip');
     if(!$download_ok){
       echo '<br/> File dosen\'t exists, try downloading the latest version.';
     }
+  }else{
+    //use get latest stable url for remote
+    $uri = Get_latest_version_url($versions[$_POST['ver']]['lang_code']);
+    $download_ok = http_get_file($uri,'latest.zip');
   }
   //unzip
   if ($download_ok){
     $done_zip = extract_zip('latest.zip',$_POST['folder']);
+  }else{
+    echo '<br/> File dosen\'t exists, try downloading the latest version.';
+    die();
   }
   
   //create database
@@ -95,7 +204,7 @@ if (isset($_POST['install'])){
   if ($done_zip){
     ?>
     <div style="display: none;">
-      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+      <?php includejQuery(); ?>
       <form action="<?php echo $_POST['folder'].'/wp-admin/setup-config.php?step=2'; ?>" method="post" id="insa">
       <p>Below you should enter your database connection details. If you're not sure about these, contact your host. </p>
       <table class="form-table">
@@ -142,6 +251,7 @@ if (isset($_POST['install'])){
   <html>
   <head>
     <title>WordPress Installer For WAMP</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style type="text/css">
     html{background:#f9f9f9;}body{background:#fff;color:#333;font-family:sans-serif;margin:2em auto;padding:1em 2em;-webkit-border-radius:3px;border-radius:3px;border:1px solid #dfdfdf;max-width:700px;}a{color:#21759B;text-decoration:none;}a:hover{color:#D54E21;}h1{border-bottom:1px solid #dadada;clear:both;color:#666;font:24px Georgia,"Times New Roman",Times,serif;margin:30px 0 0 0;padding:0;padding-bottom:7px;}h2{font-size:16px;}p,li,dd,dt{padding-bottom:2px;font-size:14px;line-height:1.5;}code,.code{font-size:14px;}ul,ol,dl{padding:5px 5px 5px 22px;}a img{border:0;}abbr{border:0;font-variant:normal;}#logo{margin:6px 0 14px 0;border-bottom:none;text-align:center;}.step{margin:20px 0 15px;}.step,th{text-align:left;padding:0;}.submit input,.button,.button-secondary{font-family:sans-serif;text-decoration:none;font-size:14px!important;line-height:16px;padding:6px 12px;cursor:pointer;border:1px solid #bbb;color:#464646;-webkit-border-radius:15px;border-radius:15px;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}.button:hover,.button-secondary:hover,.submit input:hover{color:#000;border-color:#666;}.button,.submit input,.button-secondary{background:#f2f2f2 url(../images/white-grad.png) repeat-x scroll left top;}.button:active,.submit input:active,.button-secondary:active{background:#eee url(../images/white-grad-active.png) repeat-x scroll left top;}textarea{border:1px solid #dfdfdf;-webkit-border-radius:3px;border-radius:3px;font-family:sans-serif;width:695px;}.form-table{border-collapse:collapse;margin-top:1em;width:100%;}.form-table td{margin-bottom:9px;padding:10px 20px 10px 0;border-bottom:8px solid #fff;font-size:14px;vertical-align:top;}.form-table th{font-size:14px;text-align:left;padding:16px 20px 10px 0;border-bottom:8px solid #fff;width:140px;vertical-align:top;}.form-table code{line-height:18px;font-size:14px;}.form-table p{margin:4px 0 0 0;font-size:11px;}.form-table input{line-height:20px;font-size:15px;padding:2px;border:1px #DFDFDF solid;-webkit-border-radius:3px;border-radius:3px;font-family:sans-serif;}.form-table input[type=text],.form-table input[type=password]{width:206px;}.form-table th p{font-weight:normal;}.form-table.install-success td{vertical-align:middle;padding:16px 20px 10px 0;}.form-table.install-success td p{margin:0;font-size:14px;}.form-table.install-success td code{margin:0;font-size:18px;}#error-page{margin-top:50px;}#error-page p{font-size:14px;line-height:18px;margin:25px 0 20px;}#error-page code,.code{font-family:Consolas,Monaco,monospace;}#pass-strength-result{background-color:#eee;border-color:#ddd!important;border-style:solid;border-width:1px;margin:5px 5px 5px 0;padding:5px;text-align:center;width:200px;display:none;}#pass-strength-result.bad{background-color:#ffb78c;border-color:#ff853c!important;}#pass-strength-result.good{background-color:#ffec8b;border-color:#fc0!important;}#pass-strength-result.short{background-color:#ffa0a0;border-color:#f04040!important;}#pass-strength-result.strong{background-color:#c3ff88;border-color:#8dff1c!important;}.message{border:1px solid #e6db55;padding:.3em .6em;margin:5px 0 15px;background-color:#ffffe0;}body.rtl{font-family:Tahoma,arial;}.rtl h1{font-family:arial;margin:5px -4px 0 0;}.rtl ul,.rtl ol{padding:5px 22px 5px 5px;}.rtl .step,.rtl th,.rtl .form-table th{text-align:right;}.rtl .submit input,.rtl .button,.rtl .button-secondary{margin-right:0;}.rtl #user_login,.rtl #admin_email,.rtl #pass1,.rtl #pass2{direction:ltr;}#description {background-repeat: no-repeat;color: #4C4C4C;font-family: Georgia,"Times New Roman",Times,serif;font-size: 14px;font-style: italic;min-height: 45px;padding: 15px 10px;background: none repeat scroll 0 0 #DBECF8;border-radius: 6px 6px 6px 6px;float: right;}
     </style>
@@ -153,9 +263,12 @@ if (isset($_POST['install'])){
     </h1>
       <p>Simple WordPress Auto Installer for WAMP ( XAMP and other stacks)</p>
       <p>By Bainternet <a href="http://en.bainternet.info">WordPress Developer</a></p>
+      <?php if (!function_exists('curl_init') || !in_array('curl', get_loaded_extensions())){ ?>
+      <p><b>cURL</b> is NOT installed or enabled, This script needs cURL to work.</p>
+      <?php } ?>
       <form method="POST" name="installer_form">
     <p>
-      <input name="installer" type="hidden" value="ins" /> 
+      <input name="installer" type="hidden" value="ins" />
     Select Your installation:
     <select name="ver" id="ver">
     <?php
@@ -209,7 +322,7 @@ if (isset($_POST['install'])){
     </small>
   </div>
   </div>
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <?php includejQuery(); ?>
   <script>
   var descs = [];
   jQuery(document).ready(function(){
@@ -238,13 +351,13 @@ if (isset($_POST['install'])){
 
 /**
  * http_get_file simple function to download a file using curl
- * 
+ *
  * @author Ohad Raz <admin@bainternet.info>
  * @since 0.1
  * @param  (string) $remote_url url of file to download
  * @param  (string) $local_file name of local file to create
- * 
- * @return (bool) 
+ *
+ * @return (bool)
  */
 function http_get_file($remote_url, $local_file){
     $fp = fopen($local_file, 'w');
@@ -259,12 +372,12 @@ function http_get_file($remote_url, $local_file){
 
 /**
  * extract_zip simple function to extrac a zip archive to a given folder
- * 
+ *
  * @author Ohad Raz <admin@bainternet.info>
  * @since 0.1
  * @param  (string) $zip_File zip file name (full path)
  * @param  (string) $folder   destenation folder full path
- * 
+ *
  * @return (bool)
  */
 function extract_zip($zip_File,$folder){
@@ -283,14 +396,14 @@ function extract_zip($zip_File,$folder){
 
 /**
  * create_db function to create a mysql database
- * 
+ *
  * @author Ohad Raz <admin@bainternet.info>
  * @since 0.1
  * @param  (string) $user    mysql user name
  * @param  (string) $pass    mysql user password
  * @param  (string) $server  server name
  * @param  (string) $db_name database name to create
- * 
+ *
  * @return (bool)
  */
 function create_db($user,$pass,$server,$db_name){
@@ -304,4 +417,42 @@ function create_db($user,$pass,$server,$db_name){
   } else {
     return false;
   }
+}
+  
+/**
+ * Get_latest_version_url function to get the latest version download url
+ *
+ * @author Ohad Raz <admin@bainternet.info>
+ * @since 0.3
+ * @param  (string) $local   language local key
+ *
+ * @return (string)
+ */
+function Get_latest_version_url($local = "en_US"){
+  $url =  'http://api.wordpress.org/core/version-check/1.6/?locale='.$local;
+  $c = curl_init($url);
+  curl_setopt($c, CURLOPT_RETURNTRANSFER, 1);
+  $page = curl_exec($c);
+  curl_close($c);
+  $ret = unserialize( $page);
+/*  echo '<pre>';
+  echo $local;
+  var_dump($ret);
+  echo '</pre>';
+  die();*/
+  return $ret['offers'][0]['download'];
+}
+
+/**
+ * includejQuery simple function to include jQuery js
+ *
+ * @author Ohad Raz <admin@bainternet.info>
+ * @since 0.3
+ *
+ * @return VOID
+ */
+function includejQuery(){
+  ?>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+  <?php
 }
