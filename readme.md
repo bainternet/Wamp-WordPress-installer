@@ -44,3 +44,4 @@ license.txt file included.
 0.1
 - Initial release
 
+[![Analytics](https://ga-beacon.appspot.com/UA-50573135-6/Wamp-WordPress-installer/main)](https://github.com/bainternet/Wamp-WordPress-installer)
