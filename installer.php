@@ -4,7 +4,7 @@
 *
 * @author Ohad Raz <admin@bainternet.info> | http://en.bainternet.info
 * @package WordPress Auto Installer
-* @version 0.3
+* @version 0.4
 * @file: installer.php
 * @todo Better error handling.
 *  
@@ -272,6 +272,7 @@ if (isset($_POST['install'])){
     Select Your installation:
     <select name="ver" id="ver">
     <?php
+      $radios = '';
       foreach ($versions as $key => $arr){
         $radios .=  '<option  value="'.$key.'" />'.$arr['label'].'</option>';
       }
