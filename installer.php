@@ -4,7 +4,7 @@
 *
 * @author Ohad Raz <admin@bainternet.info> | http://en.bainternet.info
 * @package WordPress Auto Installer
-* @version 0.4
+* @version 0.5
 * @file: installer.php
 * @todo Better error handling.
 *  
@@ -412,7 +412,7 @@ function create_db($user,$pass,$server,$db_name){
   if (!$link) {
     die('Could not connect: ' . mysql_error());
   }
-  $sql = 'CREATE DATABASE '.$db_name;
+  $sql = 'CREATE DATABASE IF NOT EXISTS '.$db_name;
   if (mysql_query($sql, $link)) {
     return true;
   } else {

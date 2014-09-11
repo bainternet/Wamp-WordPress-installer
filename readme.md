@@ -26,6 +26,8 @@ license.txt file included.
 
 
 ## Changelog:
+0.5
+- Fixed #9.
 
 0.4
 - Fixed #8.
